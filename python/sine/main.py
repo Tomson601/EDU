@@ -23,6 +23,8 @@ def draw(x, y):
 x = -720
 rads = 0
 
+#TODO: frequency control
+
 while True:
     for rads in range(360):
         pygame.display.update()
