@@ -36,63 +36,7 @@ prog_control=True
 while True:
     #draw_polygon(450, 446, 600, 186, 750, 446)      #UP
     #draw_polygon(686, 510, 426, 360, 686, 210)      #LEFT
-    if prog_control == True:
-        for i in range(174):
-            screen.fill(black)
-            pygame.display.update()
-            x1+=1.35632183908046
-            y1+=0.367816091954023
-            x2-=1
-            y2+=1
-            x3-=0.367816091954023
-            y3-=1.35632183908046
-            draw_polygon(x1, y1 ,x2 ,y2, x3, y3)
-            pygame.display.update()
-    if prog_control == True:
-        for i in range(174):
-            screen.fill(black)
-            pygame.display.update()
-            x1+=1.35632183908046
-            y1-=0.367816091954023
-            x2+=1
-            y2+=1
-            x3-=0.367816091954023
-            y3+=1.35632183908046
-            draw_polygon(x1, y1 ,x2 ,y2, x3, y3)
-            pygame.display.update()
-    if prog_control == True:
-        for i in range(174):
-            screen.fill(black)
-            pygame.display.update()
-            x1-=1.35632183908046
-            y1-=0.367816091954023
-            x2+=1
-            y2-=1
-            x3+=0.367816091954023
-            y3-=1.35632183908046
-            draw_polygon(x1, y1 ,x2 ,y2, x3, y3)
-            pygame.display.update()
-
-
-    x1=450
-    y1=446
-    x2=600
-    y2=186
-    x3=750
-    y3=446
-    # for i in range(260):
-    #     screen.fill(black)
-    #     pygame.display.update()
-    #     draw_polygon(450, i+y1, 600, y2-i, 750, i+y3)
-    #     pygame.display.update()
-    #     if i == 259:
-    #         for i in range(260):
-    #             screen.fill(black)
-    #             pygame.display.update()
-    #             draw_polygon(450, y2-i, 600, y2+i, 750, y3-i)
-    #             if i == 259:
-    #                 i=0
-    #                 continue
+    #TODO: Step by step rotation (by 1 pixel)
     for event in pygame.event.get():                                    # Quit loop
         if event.type == pygame.QUIT:
             pygame.quit()
