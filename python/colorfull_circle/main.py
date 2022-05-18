@@ -18,9 +18,9 @@ y_offset=HEIGHT/2
 black = (0, 0, 0)
 green=(0, 255, 0)
 
-r=(random.randint(0, 255))
-g=(random.randint(0, 255))
-b=(random.randint(0, 255))
+r=0
+g=0
+b=0
 
 colours = (r, g, b)
 
@@ -38,15 +38,23 @@ while True:
     r = (random.randint(0, 255))
     g = (random.randint(0, 255))
     b = (random.randint(0, 255))
-    
-    print(r,g,b)
-    time.sleep(0.05)
-    screen.fill(black)
+    colours = (r, g, b)
 
+    screen.fill(black)
+    print(step)
     step += 1
 
     if step == 200:
-        i = 0
+        for minus_step in range(200):
+            r = (random.randint(0, 255))
+            g = (random.randint(0, 255))
+            b = (random.randint(0, 255))
+            colours = (r, g, b)
+            pygame.draw.circle(screen, colours, (600, 360), step)
+            pygame.display.update()
+            screen.fill(black)
+            pygame.display.update()
+            step -= 1
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
