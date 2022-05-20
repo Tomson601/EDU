@@ -30,7 +30,7 @@ def draw_polygon(x1, y1, x2,y2, x3, y3):
 starting_pos = (450, 446, 600, 186, 750, 446)
 
 prog_control=True
-step = 1
+step = 0
 while True:
     pygame.draw.circle(screen, colours, (600, 360), step)
     pygame.display.update()
@@ -42,10 +42,10 @@ while True:
 
     screen.fill(black)
     print(step)
-    step += 1
+    step += 0.5
 
     if step == 200:
-        for minus_step in range(200):
+        for minus_step in range(1000):
             r = (random.randint(0, 255))
             g = (random.randint(0, 255))
             b = (random.randint(0, 255))
@@ -54,7 +54,7 @@ while True:
             pygame.display.update()
             screen.fill(black)
             pygame.display.update()
-            step -= 1
+            step -= 0.5
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
