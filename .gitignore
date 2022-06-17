@@ -2,4 +2,5 @@
 /venv
 #C, C++
 *.out
-
+#VS Code
+/.vscode
