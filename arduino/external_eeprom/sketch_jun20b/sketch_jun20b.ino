@@ -7,12 +7,12 @@ int max_address = 127;
 
 
 byte readEEPROM(int address, int i2c_address){
-  byte rcvData = 0xFF;
+  byte rcvData = 0x70;
   Wire.beginTransmission(i2c_address);
  
   // Send memory address as two 8-bit bytes
-  Wire.write((int)(address >> 8));   // MSB
-  Wire.write((int)(address & 0xFF)); // LSB
+  Wire.write((int)(address >> 0));   // MSB
+  Wire.write((int)(address & 0x70)); // LSB
  
   // End the transmission
   Wire.endTransmission();
