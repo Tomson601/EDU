@@ -4,3 +4,5 @@
 *.out
 #VS Code
 /.vscode
+#Assembly
+*.o
