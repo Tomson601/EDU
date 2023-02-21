@@ -36,3 +36,7 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                pygame.quit()
+                exit()
