@@ -38,7 +38,8 @@ class TextureBox(Button):
                 self.texture = self.textures[self.texture_choice]
             if key == "right mouse down":
                 player.enabled = False
-
+            if key == 'escape':
+                quit()
 
 
 TextureBox()
